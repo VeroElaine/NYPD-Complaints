@@ -14,7 +14,8 @@ const $complaintListEl = $("#complaint-list");
 
 // Event Listeners
 
-$controls.on("click", "button", handleGetData)
+$controls.on("click", "button", handleGetData);
+$complaintListEl.on("click", "button", handleToggleVisibility)
 
 // Functions
 init(); 
@@ -38,6 +39,10 @@ function handleGetData(evt) {
     }); 
 }
 
+function handleToggleVisibility() {
+    $(this).parent().siblings("p").toggleClass("hidden");
+}
+
 function generateUI() {
     return complaints.map(function(complaint) {
         return `
@@ -46,7 +51,7 @@ function generateUI() {
                 <h5>🚨 ${complaint.descriptor}</h5>
                 <button class="btn btn-small red">What Did The Police Do? </button>
             </div>
-            <p>${complaint.resolution_description}</p> 
+            <p class="hidden">${complaint.resolution_description}</p> 
         </section>
         `;
     })
