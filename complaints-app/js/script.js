@@ -32,8 +32,16 @@ function handleGetData(evt) {
         url: baseUrl + "?agency=NYPD&$limit=" + limit + "&borough=" + borough
     }).then(function(data){
         complaints = data;
-        
+        render();
     }, function(error) {
         console.log(error)
     }); 
+}
+
+function generateUI {
+    
+}
+
+function render () {
+    console.log(complaints)
 }
