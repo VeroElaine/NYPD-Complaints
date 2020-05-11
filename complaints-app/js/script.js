@@ -31,7 +31,8 @@ function handleGetData(evt) {
     $.ajax({
         url: baseUrl + "?agency=NYPD&$limit=" + limit + "&borough=" + borough
     }).then(function(data){
-        console.log(data)
+        complaints = data;
+        
     }, function(error) {
         console.log(error)
     }); 
