@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYPD Complaints</title>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script defer src="./js/script.js"></script>
+    <!-- google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body> 
+    <nav>
+        <div class="nav-wrapper blue">
+            <a href="#" class="brand-logo">NYPD Complaints</a>
+        </div>
+    </nav>
+    <header>
+        <h1>Where Can We Cause Trouble Today?</h1>
+        <section id="controls">
+            <input placeholder="# of Complaints" type="number">
+            <button data-borough="BROOKLYN" class="btn btn-small blue">BROOKLYN</button>
+            <button data-borough="MANHATTAN" class="btn btn-small blue">MANHATTAN</button>
+            <button data-borough="QUEENS" class="btn btn-small blue">QUEENS</button>
+            <button data-borough="STATEN+ISLAND" class="btn btn-small blue">STATEN ISLAND</button>
+            <button data-borough="BRONX" class="btn btn-small blue">BRONX</button>
+        </section>
+    </header>
+    <main id="complaint-list" class="container">
+        <section class="complaint">
+            <div>
+                <h5>🚨Loud Talking/Music</h5>
+                <button class="btn btn-small red">What Did The Police Do? </button>
+            </div>
+            <p>The Police Arrived and Determined No Action Neccessary</p> 
+        </section>
+        
+    </main>
+    <footer class="page-footer blue">
+        <p>Copyright &copy; <span id="year"></span></p>
+    </footer>
+</body>
+</html>
