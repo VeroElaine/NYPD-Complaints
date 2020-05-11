@@ -54,5 +54,5 @@ function generateUI() {
 
 function render () {
     const html = generateUI().join("");
-    $complaintListEl.html(html)
+    $complaintListEl.html(html) 
 }
