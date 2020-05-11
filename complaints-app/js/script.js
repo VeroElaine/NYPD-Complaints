@@ -38,10 +38,21 @@ function handleGetData(evt) {
     }); 
 }
 
-function generateUI {
-    
+function generateUI() {
+    return complaints.map(function(complaint) {
+        return `
+        <section class="complaint">
+            <div>
+                <h5>🚨 ${complaint.descriptor}</h5>
+                <button class="btn btn-small red">What Did The Police Do? </button>
+            </div>
+            <p>${complaint.resolution_description}</p> 
+        </section>
+        `;
+    })
 }
 
 function render () {
-    console.log(complaints)
+    const html = generateUI().join("");
+    $complaintListEl.html(html)
 }
